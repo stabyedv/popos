@@ -12,4 +12,5 @@ sudo apt -f install
 
 per ritornare a cosmic
 sudo apt install pop-desktop
-
+sudo apt install --reinstall cosmic-session xdg-desktop-portal-cosmic
+sudo dpkg-reconfigure sddm
