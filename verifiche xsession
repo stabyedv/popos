@@ -1,0 +1,14 @@
+To check if you are currently using Wayland on Pop!_OS, open a terminal and run:
+
+echo $XDG_SESSION_TYPE
+
+If the output is wayland, you are using Wayland. 
+If the output is x11, you are using Xorg.
+Alternatively, you can use:
+loginctl show-session $(loginctl | grep $(whoami) | awk '{print $1}') -p Type   
+  
+Note: If you see x11 but believe Wayland should be active (e.g., after enabling it), ensure that Wayland is properly enabled in /etc/gdm3/custom.conf and that no NVIDIA driver restrictions are blocking it. 
+ /etc/gdm3/custom.conf
+  mettere waylandenable=false per usare xorg
+
+  
