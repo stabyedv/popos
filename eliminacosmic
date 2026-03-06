@@ -1,0 +1,15 @@
+
+# 1) Togli i metapacchetti che ancorano COSMIC
+sudo apt purge -y --allow-remove-essential pop-desktop pop-de-cosmic
+
+# 2) Rimuovi i componenti COSMIC e il portale specifico
+sudo apt purge -y 'cosmic-*' pop-launcher xdg-desktop-portal-cosmic
+
+# 3) Pulizia dipendenze orfane e sistemazione pacchetti
+sudo apt autoremove --purge -y
+sudo apt -f install
+
+
+per ritornare a cosmic
+sudo apt install pop-desktop
+
